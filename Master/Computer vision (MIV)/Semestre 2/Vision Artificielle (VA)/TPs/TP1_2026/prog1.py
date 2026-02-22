@@ -13,7 +13,7 @@ image = cv2.cvtColor(image_c,cv2.COLOR_BGR2GRAY)
 # cv2.BORDER_DEFAULT: gfedcb|abcdefgh|gfedcba
 
 blur_img1 = cv2.GaussianBlur(image, (3,3),2,0, cv2.BORDER_DEFAULT)
- 
+
     # show the image on the newly created image window
 cv2.imshow('Blur image1',blur_img1)
 cv2.waitKey(0)
