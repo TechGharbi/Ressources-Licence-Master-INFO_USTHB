@@ -28,7 +28,7 @@ matches = bf.knnMatch(des1,des2, k=2)
 # Apply ratio test
 good = []
 for m,n in matches:
-    if m.distance < 0.75*n.distance:
+    if m.distance < 0.7*n.distance:
         print(m.queryIdx, m.trainIdx, m.distance, n.queryIdx, n.trainIdx, n.distance, n.imgIdx)
         good.append([m])
         
