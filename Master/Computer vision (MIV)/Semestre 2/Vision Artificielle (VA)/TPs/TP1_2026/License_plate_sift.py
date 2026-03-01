@@ -3,15 +3,11 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
-# =============================================================
-# IDENTIFICATION DE PLAQUES PAR SIFT — COULEURS CORRIGÉES
-# =============================================================
-
-QUERY_PATH   = r"matricule1.png"
+QUERY_PATH   = r"query2.png"
 DOSSIER_TRAIN = r"License Plates"   
 
-SEUIL_MATCHES  = 10
-RATIO_LOWE     = 0.70
+SEUIL_MATCHES  = 4
+RATIO_LOWE     = 0.75
 SEUIL_RATIO    = 0.10
 
 # =============================================================
@@ -126,7 +122,6 @@ if meilleur_img is not None and meilleurs_matches:
         flags=cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS
     )
 
-    # CORRECTION : BGR -> RGB pour matplotlib
     img_result_rgb = cv.cvtColor(img_result_bgr, cv.COLOR_BGR2RGB)
 
     titre = f"{statut} | Score={meilleur_score} | Ratio={meilleur_ratio_score:.2f} | {meilleur_nom[:40]}"
@@ -136,5 +131,4 @@ if meilleur_img is not None and meilleurs_matches:
     plt.title(titre, fontsize=10, color=couleur_titre, fontweight='bold')
     plt.axis('off')
     plt.tight_layout()
-    plt.savefig("resultat_matching.png", dpi=120)
     plt.show()
