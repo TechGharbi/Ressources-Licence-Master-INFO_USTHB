@@ -1,0 +1,33 @@
+INTEGER ROUTINE rout (A,B)
+% Declaration des variables
+INTEGER D,F;
+% Double declaration
+INTEGER F;
+
+REAL K;
+D = 8;
+% Non declaration de la variable 'L'
+L = 10;
+% Incompatibilite de type 
+F = 5.5;
+% Division par 0
+K= 5 / 0;
+K = D / 0;
+% Affecation du retour de la routine a une variable autre que le nom de la fonction
+FINROUT = 5
+
+ENDR
+PROGRAM trying
+INTEGER M,N;
+REAL X,Y;
+LOGICAL O;
+
+DOWHILE(M.LT.N)
+M = M + 5;
+ENDDO
+
+IF(((M.GT.N).OR.(O.EQ.TRUE))) THEN M = M + 1;
+ELSE N = N + 1;
+ENDIF
+
+END
