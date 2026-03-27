@@ -60,7 +60,7 @@ equal       { strcpy(yytext_buffer, yytext); add_token("Symbole", yytext, nb_lig
 
 .         { strcpy(yytext_buffer, yytext);
     add_token("Erreur", yytext, nb_ligne); 
-    return ERROR;
+    return 0;
     }
 
 %%
