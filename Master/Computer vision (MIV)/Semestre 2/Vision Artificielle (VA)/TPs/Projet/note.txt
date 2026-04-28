@@ -1,0 +1,16 @@
+Rédigez votre rapport – Expliquez :
+
+Calibration et adaptation de K à la résolution.
+
+Filtrage géométrique par matrice essentielle + RANSAC.
+
+Triangulation et mise à l’échelle avec la baseline réelle (10 cm).
+
+Visualisation 3D et validation des distances.
+
+Récapitulatif des scripts à garder
+step1_calibration.py → génère camera_params.npz (fait).
+
+step2_sift_matching.py (version améliorée avec RANSAC) → génère matches.npz et les images de visualisation.
+
+step3_reconstruction.py (version avec essentielle + échelle, corrigée pour PLY) → génère points3d.npy, colors3d.npy, nuage.ply.
